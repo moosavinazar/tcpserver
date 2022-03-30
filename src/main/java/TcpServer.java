@@ -7,6 +7,7 @@ public class TcpServer {
     public static void main(String[] args) throws IOException, InterruptedException {
 
         ServerSocket serverSock = new ServerSocket(3000);
+        System.out.println("Start Server");
         Socket sock = serverSock.accept();
 
         BufferedReader keyReader = new BufferedReader(new InputStreamReader(System.in));
@@ -16,8 +17,6 @@ public class TcpServer {
 
         InputStream inputStream = sock.getInputStream();
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-
-        System.out.println("Start the chitchat, type and press Enter key");
 
         String receiveMessage;
         String sendMessage;
