@@ -26,11 +26,11 @@ public class TcpSender implements Runnable {
         while (true) {
             //System.out.println("TEST");
             //System.out.println(commands.isEmpty());
-            //while (!commands.isEmpty()) {
+            //if (!commands.isEmpty()) {
             try {
-                //String c = commands.pop();
-                //System.out.println(c);
-                printWriter.println(commands.pop());
+                String c = commands.pop();
+                System.out.println(c);
+                printWriter.println(c);
                 printWriter.flush();
             } catch (NoSuchElementException ignored) {}
 
